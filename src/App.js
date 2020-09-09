@@ -18,7 +18,7 @@ function App() {
         dispatch({ type: "SET_USER", user: null });
       }
     });
-  });
+  }, [dispatch]);
 
   return (
     <Router>

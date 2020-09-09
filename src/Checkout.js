@@ -13,6 +13,7 @@ function Checkout() {
         <h2 className="checkout__title">Your Basket</h2>
         {basket?.map((product) => (
           <Product
+            key={product.id}
             id={product.id}
             title={product.title}
             image={product.image}

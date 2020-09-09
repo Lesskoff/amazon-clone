@@ -16,10 +16,12 @@ function Subtotal() {
               Subtotal ({basket?.length || 0} item{basket?.length !== 1 && "s"}
               ): <strong>{value}</strong>
             </p>
-            <small className="subtotal__gift">
-              <input type="checkbox" id="gift" />
-              <label htmlFor="gift">This order contains a gift</label>
-            </small>
+            {basket?.length > 0 && (
+              <small className="subtotal__gift">
+                <input type="checkbox" id="gift" />
+                <label htmlFor="gift">This order contains a gift</label>
+              </small>
+            )}
           </>
         )}
         decimalScale={2}
@@ -29,7 +31,7 @@ function Subtotal() {
         thousandsSeparator={true}
       />
 
-      <button>Proceed to Checkout</button>
+      {basket?.length > 0 && <button>Proceed to Checkout</button>}
     </div>
   );
 }
