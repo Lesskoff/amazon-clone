@@ -10,7 +10,9 @@ function Checkout() {
   return (
     <div className="checkout">
       <div className="checkout__left">
-        <h2 className="checkout__title">Your Basket</h2>
+        <h2 className="checkout__title">
+          Your Basket {!basket?.length && "is empty"}
+        </h2>
         {basket?.map((product) => (
           <Product
             key={product.id}
