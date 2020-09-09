@@ -1,10 +1,10 @@
 .login {
   background-color: #fff;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 3rem;
+  padding: 3rem 0;
+  min-height: 100vh;
 }
 
 .login__logo {
