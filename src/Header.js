@@ -27,7 +27,9 @@ function Header() {
 
       <div className="header__nav">
         <div className="header__option">
-          <div className="header__optionTop">Hello {user?.email}</div>
+          <div className="header__optionTop">
+            Hello {user ? user.email.split("@")[0] : "Guest"}
+          </div>
           {user ? (
             <button
               className="header__optionBottom header__optionAuthButton"
@@ -45,8 +47,10 @@ function Header() {
           )}
         </div>
         <div className="header__option">
-          <div className="header__optionTop">Returns</div>
-          <div className="header__optionBottom">& Orders</div>
+          <Link to="/orders" className="header__option header__optionBasket">
+            <div className="header__optionTop">Returns</div>
+            <div className="header__optionBottom">& Orders</div>
+          </Link>
         </div>
         <div className="header__option">
           <div className="header__optionTop">Your</div>

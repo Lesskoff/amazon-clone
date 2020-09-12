@@ -1,0 +1,30 @@
+.order {
+  padding: 40px;
+  margin: 20px 0;
+  border: 1px solid lightgrey;
+  background-color: #fff;
+  position: relative;
+}
+
+.order__topInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.order__topInfo > h2 {
+  line-height: 1em;
+}
+
+.order__id {
+  color: #777;
+  line-height: 1em;
+  font-weight: bold;
+  font-size: 0.7em;
+}
+
+.order__total {
+  padding-top: 20px;
+  border-top: 1px solid lightgrey;
+  font-weight: 500;
+}

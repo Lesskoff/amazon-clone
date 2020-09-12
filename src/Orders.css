@@ -1,0 +1,8 @@
+.orders {
+  padding: 20px;
+}
+
+.orders__container {
+  max-width: 700px;
+  margin: auto;
+}

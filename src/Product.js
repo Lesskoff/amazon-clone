@@ -2,7 +2,15 @@ import React from "react";
 import "./Product.css";
 import { useStateValue } from "./StateProvider";
 
-function Product({ id, title, image, price, rating, inStock = false }) {
+function Product({
+  id,
+  title,
+  image,
+  price,
+  rating,
+  inStock = false,
+  inCheckout = false,
+}) {
   const [state, dispatch] = useStateValue();
 
   const addToBasket = () => {
@@ -17,7 +25,7 @@ function Product({ id, title, image, price, rating, inStock = false }) {
   };
 
   return (
-    <div className="product">
+    <div className={`product ${inCheckout && "product--checkoutView"}`}>
       <div className="product__info">
         <p>{title}</p>
         <p className="product__price">
@@ -32,15 +40,16 @@ function Product({ id, title, image, price, rating, inStock = false }) {
         </div>
       </div>
       <img className="product__image" src={image} alt="" />
-      {inStock ? (
-        <button className="product__button" onClick={removeFromBasket}>
-          Remove from basket
-        </button>
-      ) : (
-        <button className="product__button" onClick={addToBasket}>
-          Add to basket
-        </button>
-      )}
+      {!inCheckout &&
+        (inStock ? (
+          <button className="product__button" onClick={removeFromBasket}>
+            Remove from basket
+          </button>
+        ) : (
+          <button className="product__button" onClick={addToBasket}>
+            Add to basket
+          </button>
+        ))}
     </div>
   );
 }

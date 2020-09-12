@@ -13,14 +13,14 @@ function Checkout() {
         <h2 className="checkout__title">
           Your Basket {!basket?.length && "is empty"}
         </h2>
-        {basket?.map((product) => (
+        {basket?.map((item) => (
           <Product
-            key={product.id}
-            id={product.id}
-            title={product.title}
-            image={product.image}
-            price={product.price}
-            rating={product.rating}
+            key={item.id}
+            id={item.id}
+            title={item.title}
+            image={item.image}
+            price={item.price}
+            rating={item.rating}
             inStock={true}
           />
         ))}

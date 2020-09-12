@@ -12,7 +12,7 @@
 
 .home__image {
   width: 100%;
-  margin-bottom: -150px;
+  margin-bottom: -25%;
   mask-image: linear-gradient(to bottom rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
   z-index: -1;
 }

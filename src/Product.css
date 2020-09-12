@@ -12,6 +12,17 @@
   z-index: 1;
 }
 
+.product--checkoutView {
+  flex-direction: row-reverse;
+  background: none;
+}
+
+.product--checkoutView .product__info,
+.product--checkoutView .product__image {
+  flex: 0.5;
+  padding: 5px;
+}
+
 .product__price {
   display: flex;
   align-items: center;
