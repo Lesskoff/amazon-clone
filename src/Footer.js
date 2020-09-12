@@ -18,8 +18,8 @@ function Footer() {
       </button>
 
       <div className="footer__warning">
-        Attention! This site is for informational purposes only. Please do not
-        make purchases or enter your real details.
+        Attention! This site is for demostration only. Please do not make
+        purchases or enter your real details.
       </div>
 
       <div class="navFooterVerticalRow ">
